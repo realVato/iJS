@@ -46,7 +46,6 @@ const flights =
 //  printGoals('Lewandowski', 'Gnarby', 'Lewandowski', 'Hummels')
 //  printGoals(...game.scored)
 
-
 // team1 < team2 && console.log(`team 1 is the shit`);
 // --------------------------------
 
@@ -92,26 +91,26 @@ const game = {
 };
 
 //1.
-const entries = Object.entries(game.scored)
+const entries = Object.entries(game.scored);
 
 for (let [i, el] of entries) {
-  i = parseInt(i)
-  console.log(`Goal ${i + 1}: ${el}`)
+  i = parseInt(i);
+  console.log(`Goal ${i + 1}: ${el}`);
 }
 
 //2.
-const values = Object.values(game.odds)
-let avg = 0
+const values = Object.values(game.odds);
+let avg = 0;
 
 for (const odd of values) {
-  avg += odd
+  avg += odd;
 }
 
-avg /= values.length
-console.log(avg)
+avg /= values.length;
+console.log(avg);
 
 //3.
 for (const [team, odd] of Object.entries(game.odds)) {
-  const teamStr = team === 'x' ? 'draw' : `victory for ${game[team]}`
-  console.log(`Odd of ${teamStr}: ${odd}`)
+  const teamStr = team === 'x' ? 'draw' : `victory for ${game[team]}`;
+  console.log(`Odd of ${teamStr}: ${odd}`);
 }
